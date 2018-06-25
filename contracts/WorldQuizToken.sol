@@ -23,6 +23,8 @@ contract WorldQuizToken {
 		_;
 	}
 
+	function setRates(uint256 _buying, uint256 _selling) onlyWQCnotract external {
+	}
 	function () external payable {
 		// buy WQT
 		balances[msg.sender] += msg.value * buyingRate;
@@ -51,6 +53,10 @@ contract WorldQuizToken {
 	}
 
 	function mint(address _to, uint256 _value) public {
+	}
+
+	function getBalanceOf(address _to) view returns(uint256) {
+		return balances[_to];
 	}
 
 
